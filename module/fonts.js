@@ -1,3 +1,7 @@
+let fontsLoad = []
+let font = document.createElement('link')
+document.head.append(font)
+
 function SetFontCustom(dir, name) {
 	let newStyle = document.createElement('style');
 	newStyle.append(document.createTextNode("\
@@ -9,9 +13,17 @@ function SetFontCustom(dir, name) {
 	document.head.append(newStyle)
 }
 function SetFont(name) {
-	let font = document.createElement('link')
+	if (fontsLoad.indexOf(name) == -1 && name != 'custom' && name != ''){
+		fontsLoad.push(name)
+		UpdateFont()
+	}
+}
+
+function UpdateFont() {
+	while (fontsLoad.indexOf('') != -1) {
+		fontsLoad.splice(fontsLoad.indexOf(''), 1)
+	}
+
 	font.rel = 'stylesheet'
-	font.href = 'https://fonts.googleapis.com/css?family=' + name.replace(/ /g, '+')
-	font.type = 'text/css'
-	document.head.append(font)
+	font.href = 'https://fonts.googleapis.com/css?family=' + fontsLoad.join('|')
 }

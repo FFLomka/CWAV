@@ -2329,8 +2329,8 @@
 			{
 				"condition" : "(spotifyEnable.value && spotifyArtist.value && spotifyArtistFont.value == 'custom') || spotifyArtistFontDir.value != ''",
 				"order" : 8250,
-				"text" : "ui_font",
-				"type" : "textinput",
+				"text" : "ui_font_dir",
+				"type" : "file",
 				"value" : ""
 			},
 			"spotifyArtistSize" : 
@@ -2498,8 +2498,8 @@
 			{
 				"condition" : "(spotifyEnable.value && spotifyDuration.value && spotifyDurationFont.value == 'custom') || spotifyDurationFontDir.value != ''",
 				"order" : 8490,
-				"text" : "ui_font",
-				"type" : "textinput",
+				"text" : "ui_font_dir",
+				"type" : "file",
 				"value" : ""
 			},
 			"spotifyDurationSize" : 
@@ -2751,8 +2751,8 @@
 			{
 				"condition" : "(spotifyEnable.value && spotifyLabel.value && spotifyLabelFont.value == 'custom') || spotifyLabelFontDir.value != ''",
 				"order" : 8130,
-				"text" : "ui_font",
-				"type" : "textinput",
+				"text" : "ui_font_dir",
+				"type" : "file",
 				"value" : ""
 			},
 			"spotifyLabelSize" : 
@@ -3113,8 +3113,8 @@
 			{
 				"condition" : "(spotifyEnable.value && spotifyProgress.value && spotifyProgressFont.value == 'custom') || spotifyProgressFontDir.value != ''",
 				"order" : 8370,
-				"text" : "ui_font",
-				"type" : "textinput",
+				"text" : "ui_font_dir",
+				"type" : "file",
 				"value" : ""
 			},
 			"spotifyProgressSize" : 
