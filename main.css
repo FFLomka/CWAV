@@ -90,6 +90,16 @@ video {
 	transition: .2s;
 }
 
+.verticalText {
+	writing-mode: vertical-lr;
+	text-orientation: mixed;
+}
+
+.verticalMixText {
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+}
+
 .loader, .loader .img, .loader .cycle, .loader .cycle2 {
 	position:absolute;
 }
