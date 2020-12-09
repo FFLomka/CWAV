@@ -238,6 +238,9 @@ class Weather {
 				let strHtml = this.format || ''
 
 				strHtml = strHtml.replaceAll("{,}",'<br>')
+				strHtml = strHtml.replaceAll("{vert}", '<span class="verticalText">')
+				strHtml = strHtml.replaceAll("{vertMix}", '<span class="verticalMixText">')
+				strHtml = strHtml.replaceAll("{end}", '</span>')
 				strHtml = strHtml.replaceAll("{city}",this.cityname)
 				strHtml = strHtml.replaceAll("{temp}",this.temp)
 				strHtml = strHtml.replaceAll("{weather}",this.status)

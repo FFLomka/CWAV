@@ -138,6 +138,9 @@ class DateM {
 		else {
 			dateHtml = this.format
 			dateHtml = dateHtml.replaceAll("{,}", '<br>')
+			dateHtml = dateHtml.replaceAll("{vert}", '<span class="verticalText">')
+			dateHtml = dateHtml.replaceAll("{vertMix}", '<span class="verticalMixText">')
+			dateHtml = dateHtml.replaceAll("{end}", '</span>')
 			dateHtml = dateHtml.replaceAll("{DD}", d.getDate())
 			dateHtml = dateHtml.replaceAll("{MM}",this.add0(d.getMonth()+1))
 			dateHtml = dateHtml.replaceAll("{YYYY}",d.getFullYear())
