@@ -247,7 +247,10 @@ class Spotify {
 					'Authorization' : 'Bearer ' + this.accessToken
 				},
 				success: function(data) {
+					if (data == null) return
+					
 					this.trackInfo = data
+					
 					if (this.is_playing != data.is_playing) this.reloadTimer
 					this.is_playing = data.is_playing
 					if (this.is_playing) {
