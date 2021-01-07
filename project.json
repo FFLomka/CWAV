@@ -1,7 +1,7 @@
 {
 	"approved" : true,
 	"contentrating" : "Everyone",
-	"description" : "[b]Official presets can only publish FLomka and Digidro, if someone puts out presets marked as CWAV, please inform me on Steam: FLomka or Discord: FLomka#0202. (Developed by RedFox)[/b]\n\n[h1]Update 1.9d[/h1]\n\n[b] - Spotify Connect - [/b]\n- Adding interpolation\n\n[b] - Module Date - [/b]\n- Adding padding for shadow\n- Optimization update\n\n[b] - Module Time - [/b]\n- Fix blinding colons\n\n[b] - Ect - [/b]\n- Fixing of non-critical errors\n\n\nYou can always offer your improvements to us and we will certainly listen to you.\n[url=https://steamcommunity.com/workshop/filedetails/discussion/1509243786/2140840224668431912/]FaQ & Guide[/url]\nDeveloped by RedFox Inc.\n[url=discord.gg/QHuMwGq][img] https://i.imgur.com/eKVpVwd.png [/img][/url]\n\nYou can support me on:\n[url=paypal.me/FLomka][img] https://i.imgur.com/4wHcKGl.png [/img][/url][url=patreon.com/FLomka][img] https://i.imgur.com/S2CVIpa.png [/img][/url]",
+	"description" : "[b]Официальные пресеты могут выкладывать только FLomka и Digidro, если кто-то выкладывает с пометкой Official  CWAV, просьба сообщить в Steam: FLomka или Discord: FLomka#0202. (Developed by RedFox)[/b]\r\n\r\n[h1] Обновление 1.9d [/h1]\r\n\r\n[b] - Spotify Connect - [/b]\r\n- Добавление интерполяции\r\n\r\n[b] - Модуль даты - [/b]\r\n- Добавление отступов для тени\r\n- Обновление оптимизации\r\n\r\n[b] - Модуль времени - [/b]\r\n- Исправить ослепление двоеточия\r\n\r\n[b] - Остальное - [/b]\r\n- Исправление некритических ошибок\r\n\r\nВы всегда можете предложить свои улучшения нам и мы обязательно прислушаемся к вам.\r\n[url=https://steamcommunity.com/workshop/filedetails/discussion/1509243786/2140840224668417293/]FaQ & Guide[/url]\r\nDeveloped by RedFox.\r\n[url=discord.gg/QHuMwGq][img] https://i.imgur.com/eKVpVwd.png [/img][/url]\r\n\r\nВы можете поддержать меня:\r\n[url=paypal.me/FLomka][img] https://i.imgur.com/4wHcKGl.png [/img][/url][url=patreon.com/FLomka][img] https://i.imgur.com/S2CVIpa.png [/img][/url]",
 	"file" : "index.html",
 	"general" : 
 	{
@@ -27,6 +27,7 @@
 				"ui_background_mode_slide_rundom" : "Random order",
 				"ui_background_mode_slide_time" : "Time to change wallpaper",
 				"ui_background_mode_slide_time_10_min" : "10 min",
+				"ui_background_mode_slide_time_10_sec" : "10 second",
 				"ui_background_mode_slide_time_1_h" : "1 hour",
 				"ui_background_mode_slide_time_1_min" : "1 min",
 				"ui_background_mode_slide_time_30_min" : "30 min",
@@ -236,6 +237,7 @@
 				"ui_background_mode_slide_rundom" : "Случайный порядок",
 				"ui_background_mode_slide_time" : "Время смены обоев",
 				"ui_background_mode_slide_time_10_min" : "10 минут",
+				"ui_background_mode_slide_time_10_sec" : "10 секунд",
 				"ui_background_mode_slide_time_1_h" : "1 час",
 				"ui_background_mode_slide_time_1_min" : "1 минута",
 				"ui_background_mode_slide_time_30_min" : "30 минут",
@@ -1496,6 +1498,10 @@
 				"condition" : "wallpapermode.value == 2",
 				"options" : 
 				[
+					{
+						"label" : "ui_background_mode_slide_time_10_sec",
+						"value" : 0.16
+					},
 					{
 						"label" : "ui_background_mode_slide_time_1_min",
 						"value" : 1
@@ -3273,6 +3279,13 @@
 				"type" : "slider",
 				"value" : 50
 			},
+			"testOld" : 
+			{
+				"order" : 9999,
+				"text" : "Old settings",
+				"type" : "bool",
+				"value" : true
+			},
 			"timeType" : 
 			{
 				"condition" : "showTime.value",
@@ -3669,14 +3682,13 @@
 				"type" : "combo",
 				"value" : "m"
 			}
-		},
-		"supportsaudioprocessing" : true
+		}
 	},
 	"preview" : "preview.jpg",
 	"tags" : [ "Relaxing" ],
-	"title" : "[CWAV Engine] Custom Wallpaper Audio Visual Engine",
+	"title" : "[CWAV Engine] Кастомные обои с эквалайзером",
 	"type" : "web",
-	"version" : 9,
+	"version" : 10,
 	"visibility" : "public",
 	"workshopid" : "1509243786",
 	"workshopurl" : "steam://url/CommunityFilePage/1509243786"

@@ -12,6 +12,7 @@ backgroundSettingsObject.cusvideoRoute = ""
 backgroundSettingsObject.random = false
 backgroundSettingsObject.currentImg = ""
 backgroundSettingsObject.speed = 1
+backgroundSettingsObject.timer = null
 backgroundSettingsObject.custom = {}
 
 var background_settings = function(settings) {
@@ -63,6 +64,8 @@ var background_settings = function(settings) {
 	}
 	if(settings.imageswitchtimes) {
 		backgroundSettingsObject.speed = settings.imageswitchtimes.value
+		if (backgroundSettingsObject.timer) clearTimeout(backgroundSettingsObject.timer)
+		backgroundSettingsObject.timer = setTimeout(changeBackground, backgroundSettingsObject.speed*60*1000)
 	}
 	if(settings.imagedisplaystlye){
 		backgroundSettingsObject.bgStyle = settings.imagedisplaystlye.value
@@ -166,7 +169,8 @@ function changeBackground(){
 			}else{
 				shouldShow()
 			}
-			setTimeout(changeBackground, backgroundSettingsObject.speed*60*1000)
+			if (backgroundSettingsObject.timer) clearTimeout(backgroundSettingsObject.timer)
+			backgroundSettingsObject.timer = setTimeout(changeBackground, backgroundSettingsObject.speed*60*1000)
 			break
 		default:
 			shouldShow()
