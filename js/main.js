@@ -39,6 +39,9 @@ var TimeColorRhythm = false
 var TimeColor
 var TimeBlurColor
 var GlitchBG = true
+var color2
+var vv = 0
+var timeTag = 1
 
 var wallpaper = $('body').particles({}).audiovisualizer({})
 var isGlobalSettings = false
@@ -627,6 +630,10 @@ function wallpaperAudioListener(arr){
 	// 	}
 	// }
 	spotifyUpdater()
+}
+
+function add0(n){
+    return n<10 ? '0'+n : ''+n
 }
 
 function mathMap(value, fromLow, fromHigh, toLow, toHigh) {

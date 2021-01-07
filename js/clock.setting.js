@@ -3,6 +3,7 @@
  *
  * User settings for .
  **/
+// var date = new Clock('.app')
 
 var clockSettingsObject = {};
 var clock_settings = function(settings) {
@@ -96,7 +97,7 @@ var clock_settings = function(settings) {
     }
     if(settings.tY){
         TimeY = settings.tY.value;
-        oClock.style.top = TimeY-50+'%';
+        oClock.style.top = TimeY+'%';
         oClock_glitch.style.top = TimeY-50+'%';
         oSlide_enable.style.marginTop = mathMap(TimeY,0,100,-30,30)+'%'
         oDigital_enable.style.marginTop = mathMap(TimeY,0,100,-30,30)+'%'
